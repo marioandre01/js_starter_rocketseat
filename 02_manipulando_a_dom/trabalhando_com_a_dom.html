@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabalhando com a dom</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome"/>
+            <input type="text" name="nome" id="nome2" class="nome"/>
+            <button class="botao">Adicionar</button>
+        </div>
+
+        <script>
+            //retorna um único elemento
+            var inputElememt = document.getElementById('nome');
+            //Sempres retorna um vetor
+            var inputElement2 = document.getElementsByTagName('input');
+            //pegar primeiro elemento do vetor
+            var inputElement3 = document.getElementsByTagName('input')[0];
+            //retorna um vetor
+            var inputElement4 = document.getElementsByClassName('nome');
+            //pegar primeiro elemento do vetor
+            var inputElement5 = document.getElementsByClassName('nome')[0];
+            //querySelector percorre a DOM do html até encontrar o elemento
+            var inputElement6 = document.querySelector('div#app input');
+
+            var inputElement7 = document.querySelector('input[name=nome]');
+            //retorna o primeiro input que tiver
+            var inputElement8 = document.querySelector('input');
+            //retorna um vetor com todos os input que tiver
+            var inputElement9 = document.querySelectorAll('input');
+            
+            console.log(inputElememt);
+            console.log(inputElement2);
+            console.log(inputElement3);
+            console.log(inputElement4);
+            console.log(inputElement5);
+            console.log(inputElement6);
+            console.log(inputElement7);
+            console.log(inputElement8);
+            console.log(inputElement9);
+
+            var inputElememt10 = document.querySelector('input[name=nome]');
+
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function(){
+                //pegar o texto digitado no input 
+                var text = inputElememt10.value;
+                alert(text);
+                //alert('Botão clicado');
+            }
+
+            //com javascrpit consegue se manipular todos os elementos da DOM
+            // não precissando "sujar" a intercafe do HTML com as funções de script cliente side
+        </script>
+    </body>
+</html>

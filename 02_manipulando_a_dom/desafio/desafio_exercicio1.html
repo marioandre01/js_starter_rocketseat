@@ -1,0 +1,38 @@
+<!-- Tem que comentar o <!DOCTYPE html> para funcionar, não sei porque por enquanto -->
+<!-- <!DOCTYPE html> -->
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio - exercicio 1</title>
+    </head>
+
+    <body>
+
+        <button id="botao">Adicionar quadrado</button>
+
+        <div id="app">          
+            
+        </div>
+
+        <script>
+
+            var btnElement = document.querySelector('#botao');
+            
+            btnElement.onclick = function (){
+                //alert('Botao clicado');
+                var divElement = document.createElement('div');
+                divElement.setAttribute('class', 'box');
+                //divElement.setAttribute('style', 'width: 100px; height: 100px; background-color: #f00');
+                divElement.style.width = '100px';
+                divElement.style.height = '100px';
+                divElement.style.backgroundColor = '#f00';
+                divElement.style.marginBottom = '3px';
+                divElement.style.marginTop = '3px';
+
+                var containerElement = document.querySelector('#app');
+                containerElement.appendChild(divElement);  
+            }   
+            
+        </script>
+    </body>
+</html>

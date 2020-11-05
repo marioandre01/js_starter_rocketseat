@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio exercicio 4</title>
+    </head>
+
+    <body>
+
+        <input type="text" name="nome"/>
+        <button onClick="adicionar()">Adicionar</button>
+        
+        <ul>
+
+        </ul>
+        
+
+        <script>
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            var listElement = document.querySelector('ul');
+               
+            function AddItenUl(texto){
+               
+                    var liElement = document.createElement('li');            
+                    var textElementLi = document.createTextNode(texto);
+                    
+                    liElement.appendChild(textElementLi); 
+                    listElement.appendChild(liElement);       
+            }
+
+            for(var i=0; i < nomes.length; i++){
+                AddItenUl(nomes[i])             
+            }
+
+            var containerElement = document.querySelector('body');
+            containerElement.appendChild(listElement);
+
+            //Adiciona o que for digitado no input na lista
+            function adicionar(){  
+                var inputElement = document.querySelector('input[name=nome]');
+                var textInput = inputElement.value;
+                //limpar o texto digitado no input
+                inputElement.value = '';
+
+                AddItenUl(textInput)
+
+                containerElement.appendChild(listElement);
+
+            }
+        </script>
+    </body>
+</html>

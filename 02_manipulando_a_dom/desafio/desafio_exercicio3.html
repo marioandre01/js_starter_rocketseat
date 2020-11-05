@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio exercicio 3</title>
+    </head>
+
+    <body>
+
+        <ul>
+
+        </ul>
+
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            var listElement = document.querySelector('ul');
+
+            //var listElement = document.createElement('ul');
+
+            for(var i=0; i < nomes.length; i++){
+                var liElement = document.createElement('li');            
+                var textElementLi = document.createTextNode(nomes[i]);
+                
+                liElement.appendChild(textElementLi); 
+                listElement.appendChild(liElement);      
+                
+            }
+
+            var containerElement = document.querySelector('body');
+            containerElement.appendChild(listElement);
+
+        </script>
+    </body>
+</html>
